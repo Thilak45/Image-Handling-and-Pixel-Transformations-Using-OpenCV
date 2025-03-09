@@ -35,51 +35,40 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 - *Register Number:* 212223240172
 
 ### Ex. No. 01
-
-#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
 ```
+#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 img =cv2.imread('Eagle_in_Flight.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-```
+
 #### 2. Print the image width, height & Channel.
-```
+
 image.shape
-```
+
 #### 3. Display the image using matplotlib imshow().
-```
+
 import cv2
 import matplotlib.pyplot as plt
-```
 # Read the image in color mode
-```
 image = cv2.imread('Eagle_in_Flight.jpg', cv2.IMREAD_COLOR)
-```
 # Convert BGR to RGB (Matplotlib uses RGB format)
-```
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-```
 # Display the image using Matplotlib
-```
 plt.imshow(image_rgb)
 plt.title("Eagle in Flight (RGB)")
 plt.axis("off")  # Hide axes
 plt.show()
-```
 
 
 #### 4. Save the image as a PNG file using OpenCV imwrite().
-```
+
 import cv2
-```
 # Read the image in color mode
-```
 image = cv2.imread('Eagle_in_Flight.jpg', cv2.IMREAD_COLOR)
-```
 # Check if the image is loaded correctly
-```
 if image is None:
     print("Error: Image not found or unable to load.")
 else:
@@ -93,18 +82,14 @@ else:
     else:
         print("Error: Failed to save the image.")
 
-```
+
 #### 5. Read the saved image above as a color image using cv2.cvtColor().
-```
+
 import cv2
 import matplotlib.pyplot as plt
-```
 # Read the saved PNG image (it may be grayscale)
-```
 image = cv2.imread('Eagle_in_Flight.png', cv2.IMREAD_UNCHANGED)
-```
 # Check if the image is loaded correctly
-```
 if image is None:
     print("Error: Image not found or unable to load.")
 else:
@@ -127,9 +112,9 @@ else:
     plt.axis("off")
     plt.show()
 
-```
+
 #### 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -157,9 +142,9 @@ else:
     plt.axis("off")  # Hide axes
     plt.show()
 
-```
+
 #### 7. Crop the image to extract any specific (Eagle alone) object from the image.
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -190,9 +175,9 @@ else:
     cv2.imwrite("Eagle_Cropped.png", cropped_image)
     print("Cropped image saved as 'Eagle_Cropped.png'")
 
-```
+
 #### 8. Resize the image up by a factor of 2x.
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -227,9 +212,9 @@ else:
     cv2.imwrite("Eagle_Resized_2x.png", resized_image)
     print("Resized image saved as 'Eagle_Resized_2x.png'")
 
-```
+
 #### 9. Flip the cropped/resized image horizontally.
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the resized image (or use the cropped image)
@@ -256,9 +241,9 @@ else:
     cv2.imwrite("Eagle_Flipped.png", flipped_image)
     print("Flipped image saved as 'Eagle_Flipped.png'")
 
-```
+
 #### 10. Read in the image ('Apollo-11-launch.jpg').
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the image in color mode
@@ -277,10 +262,10 @@ else:
     plt.title("Apollo 11 Launch")
     plt.axis("off")  # Hide axes
     plt.show()
-```
+
 
 #### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
-```
+
 import cv2
 import matplotlib.pyplot as plt
 # Read the image
@@ -331,7 +316,7 @@ else:
     # Save the modified image
     cv2.imwrite('Apollo-11-launch-with-text.jpg', image)
     print("Modified image saved as 'Apollo-11-launch-with-text.jpg'")
-```
+
 
 #### 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
 
@@ -874,7 +859,7 @@ else:
     cv2.imwrite('Boy_Merged_HSV.jpg', merged_bgr)
     print("Merged image saved as 'Boy_Merged_HSV.jpg'")
 
-
+```
 ## Output:
 ## *i)* Read and Display an Image.
 ## 1.Read 'Eagle_in_Flight.jpg' as grayscale and display: 
