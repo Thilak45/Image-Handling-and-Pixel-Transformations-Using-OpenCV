@@ -35,21 +35,21 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 - *Register Number:* 212223240172
 
 ### Ex. No. 01
-```
-#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
 
+#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 img =cv2.imread('Eagle_in_Flight.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
+```
 #### 2. Print the image width, height & Channel.
-
+```
 image.shape
-
+```
 #### 3. Display the image using matplotlib imshow().
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the image in color mode
@@ -62,9 +62,9 @@ plt.title("Eagle in Flight (RGB)")
 plt.axis("off")  # Hide axes
 plt.show()
 
-
+```
 #### 4. Save the image as a PNG file using OpenCV imwrite().
-
+```
 import cv2
 # Read the image in color mode
 image = cv2.imread('Eagle_in_Flight.jpg', cv2.IMREAD_COLOR)
@@ -82,9 +82,9 @@ else:
     else:
         print("Error: Failed to save the image.")
 
-
+```
 #### 5. Read the saved image above as a color image using cv2.cvtColor().
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the saved PNG image (it may be grayscale)
@@ -111,10 +111,10 @@ else:
     plt.title("Converted Color Image")
     plt.axis("off")
     plt.show()
-
+```
 
 #### 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -142,9 +142,9 @@ else:
     plt.axis("off")  # Hide axes
     plt.show()
 
-
+```
 #### 7. Crop the image to extract any specific (Eagle alone) object from the image.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -175,9 +175,9 @@ else:
     cv2.imwrite("Eagle_Cropped.png", cropped_image)
     print("Cropped image saved as 'Eagle_Cropped.png'")
 
-
+```
 #### 8. Resize the image up by a factor of 2x.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the color image
@@ -212,9 +212,9 @@ else:
     cv2.imwrite("Eagle_Resized_2x.png", resized_image)
     print("Resized image saved as 'Eagle_Resized_2x.png'")
 
-
+```
 #### 9. Flip the cropped/resized image horizontally.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the resized image (or use the cropped image)
@@ -241,9 +241,9 @@ else:
     cv2.imwrite("Eagle_Flipped.png", flipped_image)
     print("Flipped image saved as 'Eagle_Flipped.png'")
 
-
+```
 #### 10. Read in the image ('Apollo-11-launch.jpg').
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the image in color mode
@@ -263,9 +263,9 @@ else:
     plt.axis("off")  # Hide axes
     plt.show()
 
-
+```
 #### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the image
@@ -316,10 +316,10 @@ else:
     # Save the modified image
     cv2.imwrite('Apollo-11-launch-with-text.jpg', image)
     print("Modified image saved as 'Apollo-11-launch-with-text.jpg'")
-
+```
 
 #### 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the image
@@ -354,9 +354,9 @@ else:
     cv2.imwrite('Apollo-11-launch-with-rectangle.jpg', image)
     print("Modified image saved as 'Apollo-11-launch-with-rectangle.jpg'")
 
-
+```
 #### 13. Display the final annotated image.
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the final annotated image
@@ -376,9 +376,9 @@ else:
     plt.axis("off")  # Hide axes
     plt.show()
 
-
+```
 #### 14. Read the image ('Boy.jpg').
-
+```
 import cv2
 import matplotlib.pyplot as plt
 # Read the image in color mode
@@ -398,9 +398,9 @@ else:
     plt.axis("off")  # Hide axes
     plt.show()
 
-
+```
 #### 15. Adjust the brightness of the image.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -439,10 +439,10 @@ else:
     # Save the brightened image
     cv2.imwrite('Boy_brightness_adjusted.jpg', bright_image)
     print("Brightness adjusted image saved as 'Boy_brightness_adjusted.jpg'")
-
+```
 
 #### 16. Create brighter and darker images.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -490,10 +490,10 @@ else:
 
     print("Brighter image saved as 'Boy_brighter.jpg'")
     print("Darker image saved as 'Boy_darker.jpg'")
-
+```
 
 #### 17. Display the images (Original Image, Darker Image, Brighter Image).
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -538,9 +538,9 @@ else:
 
     plt.show()
 
-
+```
 #### 18. Modify the image contrast.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -595,9 +595,9 @@ else:
 
     print("Contrast-adjusted images saved as 'Boy_higher_contrast_1.1.jpg' and 'Boy_higher_contrast_1.2.jpg'")
 
-
+```
 #### 19. Display the images (Original, Lower Contrast, Higher Contrast).
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -648,9 +648,9 @@ else:
 
     print("Contrast-adjusted images saved as 'Boy_lower_contrast.jpg' and 'Boy_higher_contrast.jpg'")
 
-
+```
 #### 20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -711,9 +711,9 @@ else:
 
     print("Channel images saved as 'Boy_Blue_Channel.jpg', 'Boy_Green_Channel.jpg', and 'Boy_Red_Channel.jpg'")
 
-
+```
 #### 21. Merged the R, G, B , displays along with the original image
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -754,10 +754,10 @@ else:
     cv2.imwrite('Boy_Merged.jpg', merged_image)
 
     print("Merged image saved as 'Boy_Merged.jpg'")
-
+```
 
 #### 22. Split the image into the H, S, V components & Display the channels.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -810,9 +810,9 @@ else:
 
     print("HSV channel images saved as 'Boy_Hue_Channel.jpg', 'Boy_Saturation_Channel.jpg', and 'Boy_Value_Channel.jpg'")
 
-
+```
 #### 23. Merged the H, S, V, displays along with original image.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
