@@ -37,21 +37,22 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 ### Ex. No. 01
 
 #### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
-
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 img =cv2.imread('Eagle_in_Flight.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
+```
 #### 2. Print the image width, height & Channel.
-
+```
 image.shape
-
+```
 #### 3. Display the image using matplotlib imshow().
-
+```
 import cv2
 import matplotlib.pyplot as plt
+```
 # Read the image in color mode
 image = cv2.imread('Eagle_in_Flight.jpg', cv2.IMREAD_COLOR)
 # Convert BGR to RGB (Matplotlib uses RGB format)
